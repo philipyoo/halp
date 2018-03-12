@@ -10,6 +10,7 @@ Place the script where most convenient. But the folder path must be added to you
 $ cd
 $ git clone <repo>
 $ PATH=$PATH:~/.halp
+$ chmod u+x ~/.halp
 ```
 
 Now you're ready to edit and/or use
@@ -26,3 +27,10 @@ $ halp git
 > # helpful tip 2
 > git fetch
 ```
+
+## Things to do
+
+- Cleanup bash script using a simple loop
+- Add more extensive or helpful cmds
+- Find a way to chmod script on github so user doesn't need to
+- Maybe create simple setup script?
