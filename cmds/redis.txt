@@ -1,0 +1,2 @@
+# start redis-server on given port
+echo "port 4000" | redis-server -

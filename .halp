@@ -1,0 +1,61 @@
+#!/bin/bash
+
+NC='\033[0m'
+RED='\033[0;31m'
+BLUE='\033[0;34m'
+YELLOW='\033[0;33m'
+GREEN='\033[0;32m'
+
+CMD=$1
+
+if [ "$CMD" == "" ]; then
+    echo -en "${RED}CMDS:${NC} "
+    echo -e "${GREEN}test, ansible, git, docker, redis, healthcheck, ssh, kafka${NC}"
+fi
+
+if [ "$CMD" == "test" ]; then
+    cat "${HOME}/.halp/cmds/tester.txt"
+    echo "$HOME"
+fi
+
+if [ "$CMD" == "ansible" ]; then
+    echo -en "${YELLOW}"
+    cat "${HOME}/.halp/cmds/ansible.txt"
+    echo -en "${NC}"
+fi
+
+if [ "$CMD" == "git" ]; then
+    echo -en "${YELLOW}"
+    cat "${HOME}/.halp/cmds/git.txt"
+    echo -en "${NC}"
+fi
+
+if [ "$CMD" == "docker" ]; then
+    echo -en "${YELLOW}"
+    cat "${HOME}/.halp/cmds/docker.txt"
+    echo -en "${NC}"
+fi
+
+if [ "$CMD" == "redis" ]; then
+    echo -en "${YELLOW}"
+    cat "${HOME}/.halp/cmds/redis.txt"
+    echo -en "${NC}"
+fi
+
+if [ "$CMD" == "healthcheck" ]; then
+    echo -en "${YELLOW}"
+    cat "${HOME}/.halp/cmds/healthcheck.txt"
+    echo -en "${NC}"
+fi
+
+if [ "$CMD" == "ssh" ]; then
+    echo -en "${YELLOW}"
+    cat "${HOME}/.halp/cmds/ssh.txt"
+    echo -en "${NC}"
+fi
+
+if [ "$CMD" == "kafka" ]; then
+    echo -en "${YELLOW}"
+    cat "${HOME}/.halp/cmds/kafka.txt"
+    echo -en "${NC}"
+fi

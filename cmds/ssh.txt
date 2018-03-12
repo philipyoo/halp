@@ -1,0 +1,17 @@
+
+eval `ssh-agent -s`
+ssh-add
+
+# allow access to minions. add priv key to sup then.. [temp]
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/terraform
+
+# ssh tunnel
+## Port 8888 local // Port 80 remote
+## 10.100.2.106 is remote IP
+sudo ssh -L 8888:127.0.0.1:80 10.100.2.106
+## The `N` flag is to run in background, and doesn't ssh into the node
+## first 80 == port to access the UI from browser
+## second 80 == port to forward from remote host (i.e. identisee port)
+ssh 10.100.2.106 -NL 10.100.1.113:80:0:80
+

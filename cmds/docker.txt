@@ -1,0 +1,12 @@
+# exec into docker container as root
+docker exec -it -u root <container_name> bash
+
+# find logs
+docker inspect <container-name> | grep -i log
+
+# Create and tag docker image, and push to dockerhub
+docker tag <uuid-tag-of-img> philipyoo/<name-of-my-image>:<tag-name>
+docker push philipyoo/<name-of-my-image>
+
+# edit/commit
+docker commit <container-id> philipyoo/<name-of-my-image>

@@ -1,0 +1,6 @@
+# general all cmd
+ansible all -i env/sc/inventory -m shell -a 'docker ps' --become
+ansible all -i env/sc/inventory -m shell -a 'docker rm -f $(docker ps -aq)' --become
+
+# move time forward
+ansible all -i env/sc/inventory -m shell -a 'sudo date -s "Tue Feb 27 04:00:00 UTC 2018"'

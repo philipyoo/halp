@@ -1,0 +1,5 @@
+# check merged branches
+git branch --merged master
+
+# update repository and auto prune all stale references
+git fetch -p

@@ -1,0 +1,5 @@
+# "healthcheck" a port
+echo stat | nc localhost 2181
+
+# Check current ip
+ip addr
